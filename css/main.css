@@ -2,6 +2,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url('../fonts/mulish-v7-latin-regular.woff2') format('woff2'),
     url('../fonts/mulish-v7-latin-regular.woff') format('woff');
 }
@@ -9,6 +10,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 300;
+    font-display: swap;
     src: url('../fonts/mulish-v7-latin-300.woff2') format('woff2'),
     url('../fonts/mulish-v7-latin-300.woff') format('woff');
 }
@@ -16,6 +18,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 600;
+    font-display: swap;
     src: url('../fonts/mulish-v7-latin-600.woff2') format('woff2'),
     url('../fonts/mulish-v7-latin-600.woff') format('woff');
 }
@@ -23,6 +26,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
+    font-display: swap;
     src: url('../fonts/mulish-v7-latin-700.woff2') format('woff2'),
     url('../fonts/mulish-v7-latin-700.woff') format('woff');
 }
@@ -40,6 +44,16 @@ h1, h2, h3, h4, p{
     margin: 0;
 }
 
+ul, ol{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    vertical-align: middle;
+}
+
 .container{
     max-width: 1160px;
     margin-left: auto;
@@ -48,11 +62,13 @@ h1, h2, h3, h4, p{
     padding-right: 20px;
 }
 
-/* header */
-
 .main{
-
+    background-image: url("./../images/element.svg");
+    background-position: calc(50% + 615px) 5440px;
+    background-repeat: no-repeat;
 }
+
+/* header */
 
 .header {
     margin-bottom: 80px;
@@ -75,17 +91,10 @@ h1, h2, h3, h4, p{
     align-items: middle;
 }
 
-.navbar {
-
-}
-
 .nav-list {
-    list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
-    margin: 0;
 }
 
 .nav-item {
@@ -109,6 +118,7 @@ h1, h2, h3, h4, p{
     opacity: 1;
 }
 
+
 /* hero */
 
 .hero {
@@ -129,7 +139,6 @@ h1, h2, h3, h4, p{
 }
 
 .hero-heading {
-    margin: 0;
     font-size: 48px;
     line-height: 56px;
     color: #000000;
@@ -137,7 +146,6 @@ h1, h2, h3, h4, p{
 }
 
 .hero-text {
-    margin: 0;
     font-weight: 300;
     font-size: 21px;
     line-height: 32px;
@@ -163,8 +171,7 @@ h1, h2, h3, h4, p{
 }
 
 .hero-link:active{
-    background-color: rgb(36, 36, 224);
-    counter: #fff;
+    opacity: 0.8;
 }
 
 .hero-right-side {
@@ -174,6 +181,7 @@ h1, h2, h3, h4, p{
 }
 
 
+/* servisec */
 
 .services {
     margin-bottom: 162px;
@@ -210,7 +218,6 @@ h1, h2, h3, h4, p{
 }
 
 .services-text {
-    margin: 0;
     width: 952px;
     font-weight: 300;
     font-size: 18px;
@@ -221,9 +228,6 @@ h1, h2, h3, h4, p{
 }
 
 .services-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
     margin-bottom: 71px;
     display: flex;
     flex-wrap: wrap;
@@ -233,14 +237,16 @@ h1, h2, h3, h4, p{
 
 .services-item {
     width: 350px;
-    /* box-shadow: 0 0 3px 1px #333; */
+    box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
     padding: 47px 50px 47px 39px;
     background: #fff;
-    box-shadow: 10px 40px 50px #e5e9f666;
     border-radius: 20px;
     margin-bottom: 37px;
 }
 
+.services-item:hover {
+    box-shadow: 10px 40px 50px rgba(151, 151, 163, 0.4);
+    }
 
 .services-img {
     width: 92px;
@@ -283,11 +289,12 @@ h1, h2, h3, h4, p{
 }
 
 .link-button:active{
-    color: #fff;
-    background-color: blue;
+    opacity: 0.8;
 }
 
+
 /* healtcare */
+
 .heathcare {
     padding-bottom: 229px;
 }
@@ -302,10 +309,6 @@ h1, h2, h3, h4, p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.healthcare-img {
-    vertical-align: middle;
 }
 
 .healthcare-box {
@@ -333,11 +336,9 @@ h1, h2, h3, h4, p{
     margin-bottom: 37px;
 }
 
-.link-button {
-
-}
 
 /* apps */
+
 .apps{
     margin-bottom: 269px;
 }
@@ -361,6 +362,7 @@ h1, h2, h3, h4, p{
 .apps-button-icon{
     margin-left: 5px;
 }
+
 
 /* customer */
 
@@ -458,23 +460,21 @@ h1, h2, h3, h4, p{
     vertical-align:middle ;
 }
 
+
+
 /* disc */
 
 .disc-list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
     display: flex;
     justify-content: space-between;
 }
 
-.disc-item {
-
+.disc-item + .disc-item {
+    margin-left:18px;
 }
 
 .disc-link {
     display: inline-block;
-    margin: 9px;
     width: 10px;
     height: 10px;
     background: #5B9BF3;
@@ -482,12 +482,16 @@ h1, h2, h3, h4, p{
     border-radius: 50%;
 }
 
+.disc-link:hover {
+    opacity: 0.8;
+}
+
 .disc-link-active{
     opacity: 1;
 }
 
-/* article */
 
+/* article */
 
 .article {
     margin-bottom: 201px;
@@ -503,7 +507,6 @@ h1, h2, h3, h4, p{
 }
 
 .article-heading {
-    margin: 0;
     font-family: Mulish;
     font-weight: bold;
     font-size: 36px;
@@ -522,9 +525,6 @@ h1, h2, h3, h4, p{
 }
 
 .article-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: space-between;
     margin-bottom: 69px;
@@ -536,6 +536,10 @@ h1, h2, h3, h4, p{
     margin: 7px;
     background-color: #fff;
     box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+}
+
+.article-item:hover {
+    box-shadow: 10px 40px 50px #a8abb866;
 }
 
 .article-item-img {
@@ -550,7 +554,6 @@ h1, h2, h3, h4, p{
 }
 
 .article-item-heading {
-    margin: 0;
     font-family: Mulish;
     font-weight: bold;
     font-size: 21px;
@@ -560,8 +563,6 @@ h1, h2, h3, h4, p{
 }
 
 .article-item-text {
-    margin: 0;
-    padding: 0;
     font-family: Mulish;
     font-weight: 300;
     font-size: 16px;
@@ -596,8 +597,9 @@ h1, h2, h3, h4, p{
 /* foooter */
 
 .footer {
-    background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+    background-image: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
     padding-bottom: 109px;
+    z-index: 99;
 }
 
 .footer-container {
@@ -639,9 +641,6 @@ h1, h2, h3, h4, p{
 }
 
 .footer-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     flex-direction: column;
     align-items: center;
 }
@@ -654,14 +653,7 @@ h1, h2, h3, h4, p{
 }
 
 .footer-list-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     font-weight: 300;
     font-size: 18px;
     line-height: 38px;
-}
-
-.list-list-item {
-
 }
